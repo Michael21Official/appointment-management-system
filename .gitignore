@@ -1,33 +1,251 @@
-HELP.md
+cat > .gitignore << 'EOF'
+##############################
+# Java
+##############################
+*.class
+*.log
+*.ctxt
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+replay_pid*
+*.dump
+*.hprof
+*.jfr
+
+##############################
+# Maven
+##############################
 target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+##############################
+# Gradle
+##############################
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
 
-### IntelliJ IDEA ###
-.idea
+##############################
+# Spring Boot
+##############################
+application-local.properties
+application-dev.properties
+application-prod.properties
+!application-example.properties
+application-*.properties
+application-*.yml
+spring-boot-devtools.properties
+
+##############################
+# IDE - IntelliJ IDEA
+##############################
+.idea/
 *.iws
 *.iml
 *.ipr
+.idea_modules/
+out/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/aws.xml
+.idea/dbnavigator.xml
+.idea/httpRequests/
+.idea/dataSources/
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+.idea/gradle.xml
+.idea/libraries/
+.idea/misc.xml
+.idea/modules.xml
+.idea/compiler.xml
+.idea/encodings.xml
+.idea/jarRepositories.xml
+.idea/vcs.xml
+.idea/*.xml
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+##############################
+# IDE - Eclipse
+##############################
+.classpath
+.project
+.settings/
+bin/
+.metadata/
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+.apt_generated/
+.factorypath
+.vertx/
 
-### VS Code ###
+##############################
+# IDE - VS Code
+##############################
 .vscode/
+*.code-workspace
+*.code-snippets
+
+##############################
+# IDE - NetBeans
+##############################
+nbproject/
+nb-configuration.xml
+nbactions.xml
+*.nb-gradle
+
+##############################
+# OS Files
+##############################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Thumbs.db:encryptable
+Desktop.ini
+@eaDir/
+$RECYCLE.BIN/
+
+##############################
+# Docker
+##############################
+*.pid
+docker-compose.override.yml
+!docker-compose.override.example.yml
+.dockerignore
+
+##############################
+# Node.js / Frontend
+##############################
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+##############################
+# Testing
+##############################
+test-output/
+test-results/
+*.test
+*.surefire-*
+*.fail-safe-*
+coverage/
+.measurements/
+*.jacoco
+*.html
+
+##############################
+# Secrets & Sensitive Data
+##############################
+*.p12
+*.pfx
+*.jks
+*.key
+*.pem
+*.crt
+*.csr
+*.p8
+*.der
+*.cer
+*.keystore
+*.truststore
+*.secret
+*.env
+.env.local
+.env.*.local
+secrets/
+credentials/
+*.sql
+*.sqlite
+*.db
+
+##############################
+# Logs & Temp Files
+##############################
+logs/
+*.log
+temp/
+tmp/
+*.tmp
+*.temp
+*.cache
+*.lock
+
+##############################
+# Application specific
+##############################
+# Don't commit database files
+*.h2.db
+*.mv.db
+*.trace.db
+*.lck
+*.script
+*.log
+
+# Don't commit uploaded files
+uploads/
+files/
+media/
+static/uploads/
+public/uploads/
+
+# Don't commit generated docs
+docs/_build/
+docs/api/
+apidocs/
+javadoc/
+
+##############################
+# Other
+##############################
+*.swp
+*.swo
+*~
+*.lock
+*.pid
+*.seed
+*.pid.lock
+*.command
+*.gitattributes
+*.gitmodules
+
+# Lombok
+lombok.config
+
+# MapStruct
+mapstruct-generated/
+
+# QueryDSL
+target/generated-sources/
+
+# JPA Buddy
+.jpb/
+
+# Spring Native
+native/
+##############################
+EOF
